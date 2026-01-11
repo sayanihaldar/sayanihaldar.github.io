@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
-2:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
-3:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
-0:{"buildId":"Kk2ng6MiIS0ObXCrp77Aw","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+2:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/117bfe402b75b387.js"],"default"]
+3:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/117bfe402b75b387.js"],"default"]
+0:{"buildId":"Lf2Q31m_NvS0ynIMHkPn5","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":[["$","div","l",{"className":"fixed inset-0 z-50 flex items-center justify-center bg-base-100","children":["$","h1",null,{"className":"text-8xl font-serif text-primary animate-pulse-fast","children":" SH "}]}],[],[]],"isPartial":false}
