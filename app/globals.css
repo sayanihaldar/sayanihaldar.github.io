@@ -1,0 +1,275 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --heading-font: "Instrument Serif", serif;
+  --heading-font-letter-spacing: 3px;
+  /* Enhanced contrast for better readability (WCAG AA/AAA) */
+  --background: oklch(0.99 0.005 40);
+  --foreground: oklch(0.15 0.02 350);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.02 350);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 350);
+
+  /* Primary: Rich Maroon - darkened for better contrast */
+  --primary: oklch(0.35 0.18 10);
+  --primary-foreground: oklch(0.99 0.005 40);
+
+  /* Secondary: Deep Forest Green - darkened */
+  --secondary: oklch(0.38 0.14 155);
+  --secondary-foreground: oklch(0.99 0.005 155);
+
+  /* Accent: Dark Pink/Rose - adjusted for contrast */
+  --accent: oklch(0.52 0.2 345);
+  --accent-foreground: oklch(0.99 0.005 345);
+
+  --muted: oklch(0.96 0.01 40);
+  --muted-foreground: oklch(0.42 0.03 350);
+
+  --destructive: oklch(0.45 0.22 20);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.85 0.02 350);
+  --input: oklch(0.85 0.02 350);
+  --ring: oklch(0.35 0.18 10);
+
+  --radius: 1rem;
+  --chart-1: oklch(0.35 0.18 10);
+  --chart-2: oklch(0.38 0.14 155);
+  --chart-3: oklch(0.52 0.2 345);
+  --chart-4: oklch(0.6 0.16 60);
+  --chart-5: oklch(0.48 0.16 280);
+
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.15 0.02 350);
+  --sidebar-primary: oklch(0.35 0.18 10);
+  --sidebar-primary-foreground: oklch(0.99 0.005 40);
+  --sidebar-accent: oklch(0.97 0.01 40);
+  --sidebar-accent-foreground: oklch(0.35 0.18 10);
+  --sidebar-border: oklch(0.85 0.02 350);
+  --sidebar-ring: oklch(0.35 0.18 10);
+}
+
+.dark {
+  /* Enhanced dark mode contrast */
+  --background: oklch(0.1 0.02 350);
+  --foreground: oklch(0.98 0.005 40);
+  --card: oklch(0.14 0.02 350);
+  --card-foreground: oklch(0.98 0.005 40);
+  --popover: oklch(0.14 0.02 350);
+  --popover-foreground: oklch(0.98 0.005 40);
+
+  --primary: oklch(0.68 0.2 10);
+  --primary-foreground: oklch(0.1 0.02 350);
+
+  --secondary: oklch(0.58 0.16 155);
+  --secondary-foreground: oklch(0.98 0.005 155);
+
+  --accent: oklch(0.7 0.22 345);
+  --accent-foreground: oklch(0.1 0.02 345);
+
+  --muted: oklch(0.2 0.02 350);
+  --muted-foreground: oklch(0.7 0.02 40);
+
+  --destructive: oklch(0.52 0.22 20);
+  --destructive-foreground: oklch(0.98 0.005 40);
+
+  --border: oklch(0.24 0.02 350);
+  --input: oklch(0.24 0.02 350);
+  --ring: oklch(0.68 0.2 10);
+
+  --chart-1: oklch(0.68 0.2 10);
+  --chart-2: oklch(0.58 0.16 155);
+  --chart-3: oklch(0.7 0.22 345);
+  --chart-4: oklch(0.72 0.18 60);
+  --chart-5: oklch(0.62 0.18 280);
+
+  --sidebar: oklch(0.14 0.02 350);
+  --sidebar-foreground: oklch(0.98 0.005 40);
+  --sidebar-primary: oklch(0.68 0.2 10);
+  --sidebar-primary-foreground: oklch(0.98 0.005 40);
+  --sidebar-accent: oklch(0.2 0.02 350);
+  --sidebar-accent-foreground: oklch(0.98 0.005 40);
+  --sidebar-border: oklch(0.24 0.02 350);
+  --sidebar-ring: oklch(0.68 0.2 10);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced mesh gradients with stronger opacity and better contrast */
+@layer utilities {
+  .mesh-gradient-creative {
+    background: radial-gradient(at 20% 30%, oklch(0.35 0.18 10 / 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 20%, oklch(0.52 0.2 345 / 0.12) 0px, transparent 50%),
+      radial-gradient(at 40% 70%, oklch(0.38 0.14 155 / 0.1) 0px, transparent 50%),
+      radial-gradient(at 90% 80%, oklch(0.6 0.16 60 / 0.08) 0px, transparent 50%), oklch(0.99 0.005 40);
+    position: relative;
+  }
+
+  .mesh-gradient-dark {
+    background:radial-gradient(at 30% 80%, oklch(0.22 0.14 155 / 0.7) 0px, transparent 45%), 
+    oklch(16.248% 0.05024 271.992);
+    position: relative;
+  }
+
+  .mesh-gradient-card {
+    background: radial-gradient(at 0% 0%, oklch(0.52 0.2 345 / 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, oklch(0.38 0.14 155 / 0.08) 0px, transparent 50%), 
+      oklch(1 0 0);
+  }
+
+  .noise-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  .gradient-text-creative {
+    background: linear-gradient(135deg, oklch(0.35 0.18 10), oklch(0.52 0.2 345));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card {
+    background: oklch(1 0 0 / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(0.85 0.02 350 / 0.5);
+  }
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  letter-spacing: var(--heading-font-letter-spacing);
+}
+h3, h4, h5, h6, .font-heading {
+    font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
+.instagram-gradient {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.linkedin-bg {
+  background-color: #0077b7;
+}
+.bg-background {
+  background-color: #fbf4f9;
+}
+/* gsap */
+body {
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* optional, but helps with layering */
+}
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
+#professional {
+  /* Promotes this element to its own GPU layer */
+  will-change: transform; 
+  /* Ensures it doesn't repaint during scroll */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+#footer-img {
+	height: 100px;
+	width: 100%;
+	display: block;
+	overflow: visible;
+  margin-bottom: -1px;
+}
+.sentenceSplit {
+  text-align: center;
+  will-change: transform;
+}
+.sentenceSplit * {
+  will-change: transform;
+}
+.flair {
+  position: fixed;
+  opacity: 0;
+  width: 50px;
+}
+.animation-spin {
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes pulse-fast { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.animate-pulse-fast { animation: pulse-fast 0.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
